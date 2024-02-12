@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "cumbuca-challenge",
+    "slug": "cumbuca-challenge",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "cumbuca-challenge",
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Permitir que $(PRODUCT_NAME) use o Face ID."
+        }
+      ],
+      ["@config-plugins/detox"]
+    ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Permitir que $(PRODUCT_NAME) use o Face ID."
+      },
+      "bundleIdentifier": "dev.rogeriotavares.project.cumbucachallenge"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ],
+      "package": "dev.rogeriotavares.project.cumbucachallenge"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
