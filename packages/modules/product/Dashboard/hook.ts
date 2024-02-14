@@ -88,15 +88,19 @@ export const useDashboard = () => {
 
   const handleSearch = useCallback(
     async (searchBy: string = "") => {
-      if (searchBy === searchedBy) {
+      if (
+        searchBy.trim().toLocaleLowerCase() ===
+        searchedBy.trim().toLocaleLowerCase()
+      ) {
         return;
       }
       const allProducts = await getProducts();
       setProducts(
         allProducts.filter((product) =>
           product.name
+            .trim()
             .toLocaleLowerCase()
-            .includes(searchBy?.toLocaleLowerCase())
+            .includes(searchBy.trim().toLocaleLowerCase())
         )
       );
       setSearchedBy(searchBy);

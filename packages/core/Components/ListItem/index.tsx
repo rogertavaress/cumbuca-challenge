@@ -42,9 +42,8 @@ export const ListItem = ({
   };
 
   return (
-    <ScaleDecorator>
+    <ScaleDecorator key={items[0].value}>
       <Pressable
-        key={items[0].value}
         style={styles.container}
         onLongPress={drag}
         disabled={isActive}

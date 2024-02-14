@@ -10,6 +10,7 @@ import { useStyles } from "@core/Theme";
 import { componentStyles } from "./styles";
 import { useLogin } from "./hook";
 import { TEST_IDS } from "./constants";
+import { ScrollViewContainer } from "@core/Components/base/ScrollViewContainer";
 
 export const Login = () => {
   const { styles } = useStyles(componentStyles);
@@ -25,7 +26,7 @@ export const Login = () => {
   } = useLogin();
 
   return (
-    <View style={styles.container}>
+    <ScrollViewContainer style={styles.container}>
       <Header title="Login" />
       <Container>
         <InputText
@@ -57,6 +58,6 @@ export const Login = () => {
           />
         )}
       </Container>
-    </View>
+    </ScrollViewContainer>
   );
 };

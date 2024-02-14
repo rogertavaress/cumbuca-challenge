@@ -11,6 +11,7 @@ import { validateCPF } from "@core/Libs/Form/validations/cpf";
 import { validateRegex } from "@core/Libs/Form/validations/regex";
 
 import { ProductScreenNames } from "@modules/product/product.constants";
+import { Alert } from "react-native";
 
 export const useLogin = () => {
   const { isBiometryEnabled } = useBiometry();
@@ -38,6 +39,11 @@ export const useLogin = () => {
     setLoading(false);
     if (authenticated) {
       navigate(ProductScreenNames.DASHBOARD);
+    } else {
+      Alert.alert(
+        "Usuário não encontrado",
+        "Tente novamente com um CPF e/ou senha diferente!"
+      );
     }
   };
 

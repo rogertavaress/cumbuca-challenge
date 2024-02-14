@@ -1,12 +1,11 @@
 import { DefaultStyleType, ThemeContantsType } from "@core/Theme/types";
 
-import { CONTAINER_SPACE, PADDING, STATUSBAR_SPACE } from "./constants";
+import { CONTAINER_SPACE, PADDING } from "./constants";
 
 export const componentStyles =
   (props: { withStatusBarSpace: boolean }) => (theme: ThemeContantsType) => ({
     container: {
       backgroundColor: theme.COLORS.BLUE_INVERSE,
-      marginTop: props.withStatusBarSpace ? -STATUSBAR_SPACE : 0,
       paddingHorizontal: 20,
       paddingVertical: PADDING,
       marginBottom: CONTAINER_SPACE,

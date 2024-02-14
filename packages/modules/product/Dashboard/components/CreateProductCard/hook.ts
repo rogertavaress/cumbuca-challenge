@@ -17,7 +17,7 @@ export const useCreateProductCard = ({
     defaultForm,
     validation: {
       name: validateRegex(/^.+$/),
-      stockQuantity: validateRegex(/^\d+$/),
+      stockQuantity: validateRegex(/^[1-9]\d*$/),
       unitPrice: (unitPrice) => Number(unitPrice.replace(",", ".")) > 0,
     },
     formLabels: {
@@ -26,6 +26,8 @@ export const useCreateProductCard = ({
       unitPrice: "valor unitário",
     },
   });
+
+  console.log({ errorMessages });
 
   const getTotal = (stockQuantity: string, unitPrice: string): string => {
     const stockQuantityNumber =

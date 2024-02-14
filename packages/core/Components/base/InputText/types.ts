@@ -7,5 +7,6 @@ export type InputTextProps = {
   leftText?: string;
   leftComponent?: JSX.Element;
   rightComponent?: JSX.Element;
+  defaultCanShowError?: boolean;
   isSmall?: boolean;
 } & TextInputProps;

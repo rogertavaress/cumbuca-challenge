@@ -15,10 +15,11 @@ export const InputText = ({
   inputRef,
   errorMessage,
   isSmall,
+  defaultCanShowError = false,
   ...props
 }: InputTextProps) => {
   const { styles, theme, scheme } = useStyles(componentStyles);
-  const [canShowError, setCanShowError] = useState(false);
+  const [canShowError, setCanShowError] = useState(defaultCanShowError);
 
   const handleBlur = () => {
     setCanShowError(true);

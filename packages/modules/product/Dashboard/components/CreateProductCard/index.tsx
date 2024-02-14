@@ -44,11 +44,12 @@ export const CreateProductCard = ({
           <InputNumber
             defaultValue={defaultForm.stockQuantity}
             errorMessage={errorMessages.stockQuantity}
-            minValue={1}
+            minValue={0}
             onChangeText={(stockQuantity) => updateForm({ stockQuantity })}
             title="Quantidade em estoque:"
             testID={TEST_IDS.INPUT_QNT}
             value={form.stockQuantity}
+            defaultCanShowError
           />
           <InputDecimal
             defaultValue={defaultForm.unitPrice}

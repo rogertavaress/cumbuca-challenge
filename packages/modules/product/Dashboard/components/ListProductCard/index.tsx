@@ -6,6 +6,7 @@ import { useStyles } from "@core/Theme";
 
 import { componentStyles } from "./styles";
 import { ListProductCardProps } from "./types";
+import { View } from "react-native";
 
 export const ListProductCard = ({
   products,
@@ -25,6 +26,7 @@ export const ListProductCard = ({
       data={products}
       onDragEnd={({ from, to }) => from !== to && onChangeOrder?.(from, to)}
       keyExtractor={({ id }) => id.toString()}
+      ListFooterComponent={<View style={{ height: 50 }} />}
       renderItem={({
         item: { id, name, unitPrice, stockQuantity, total },
         ...info
