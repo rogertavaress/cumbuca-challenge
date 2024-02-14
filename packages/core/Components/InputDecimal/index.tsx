@@ -8,7 +8,7 @@ export const InputDecimal = ({ ...props }: InputTextProps) => {
   const inputRef = useRef<TextInput>(props.inputRef);
 
   const handleChange = (currentValue: string) => {
-    const realValue = currentValue.replace(/[\,]/g, "");
+    const realValue = currentValue.replace(/\D/g, "").replace(/[\,]/g, "");
     const realValueNumber = BigInt(realValue);
 
     let newValue = realValueNumber.toString().padStart(3, "0");

@@ -63,9 +63,13 @@ export const ListItem = ({
                 <InputNumber
                   isSmall
                   value={value?.toString().padStart(2, "0")}
-                  minValue={1}
+                  minValue={0}
                   onChangeText={(updatedValue) => {
-                    action?.(Number(updatedValue));
+                    if (Number(updatedValue) < 1) {
+                      handleRemove();
+                    } else {
+                      action?.(Number(updatedValue));
+                    }
                   }}
                 />
               ) : (
@@ -79,7 +83,7 @@ export const ListItem = ({
         <TouchableOpacity
           style={styles.removeButton}
           onPress={handleRemove}
-          testID={TEST_IDS.REMOVE_BUTTON}
+          testID={`${TEST_IDS.REMOVE_BUTTON}_${items[0].value}`}
         >
           <Image source={TrashIcon} style={styles.removeButtonIcon} />
         </TouchableOpacity>

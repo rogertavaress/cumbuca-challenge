@@ -51,7 +51,11 @@ export const InputNumber = ({
         <TouchableOpacity
           style={isSmall ? [styles.button, styles.buttonSmall] : styles.button}
           onPress={() => handleChange(-1)}
-          testID={TEST_IDS.DECREMENT_BUTTON}
+          testID={
+            props.testID
+              ? `${props.testID}_decrement`
+              : TEST_IDS.DECREMENT_BUTTON
+          }
         >
           <Image
             source={scheme === "dark" ? MinusWhiteIcon : MinusIcon}
@@ -63,7 +67,11 @@ export const InputNumber = ({
         <TouchableOpacity
           style={isSmall ? [styles.button, styles.buttonSmall] : styles.button}
           onPress={() => handleChange(1)}
-          testID={TEST_IDS.INCREMENT_BUTTON}
+          testID={
+            props.testID
+              ? `${props.testID}_increment`
+              : TEST_IDS.INCREMENT_BUTTON
+          }
         >
           <Image
             source={scheme === "dark" ? PlusWhiteIcon : PlusIcon}

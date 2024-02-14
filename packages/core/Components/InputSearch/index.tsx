@@ -23,6 +23,7 @@ export const InputSearch = ({ onSearch, ...props }: InputSearchProps) => {
       returnKeyType="search"
       onSubmitEditing={handleSearch}
       onChangeText={setValue}
+      testID={TEST_IDS.INPUT}
       rightComponent={
         <TouchableOpacity
           style={{ paddingHorizontal: 15 }}
