@@ -6,10 +6,7 @@ import {
   createElement,
   FunctionComponent,
 } from "react";
-import {
-  NavigationContextData,
-  NavigationProviderType,
-} from "./navigation.types";
+import { NavigationContextData, NavigationProviderType } from "./types";
 
 const NavigationContext = createContext<NavigationContextData>(
   {} as NavigationContextData

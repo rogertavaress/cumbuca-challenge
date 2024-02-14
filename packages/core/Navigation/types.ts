@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
 
-export interface NavigationContextData {
+export type NavigationContextData = {
   navigate: (routeName: string, params?: Object) => void;
   goBack: () => void;
-}
+};
 
 export type ScreenType = {
   component: FunctionComponent<any>;
