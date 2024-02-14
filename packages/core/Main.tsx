@@ -1,15 +1,9 @@
-import {
-  Keyboard,
-  KeyboardAvoidingView,
-  Pressable,
-  TouchableWithoutFeedback,
-} from "react-native";
+import { Keyboard, TouchableWithoutFeedback } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { AuthModule } from "@modules/auth";
 import { ProductModule } from "@modules/product";
 
-import { ScrollViewContainer } from "./Components/base/ScrollViewContainer";
 import { StatusBar } from "./Components/StatusBar";
 import { NavigationProvider } from "./Navigation";
 
