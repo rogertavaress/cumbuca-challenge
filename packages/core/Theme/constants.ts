@@ -1,0 +1,51 @@
+export const COLORS = {
+  light: {
+    WHITE: "#FFFFFF",
+    BASE: "#FFFFFF",
+    INVERSE: "#000000",
+    GREEN: "#00875F",
+    GREEN_INVERSE: "#00B37E",
+    BLUE: "#003a87",
+    BLUE_INVERSE: "#0064b3",
+    RED: "#F75A68",
+    RED_INVERSE: "#AA2834",
+    GRAY_700: "#121214",
+    GRAY_600: "#202024",
+    GRAY_500: "#29292E",
+    GRAY_400: "#323238",
+    GRAY_300: "#7C7C8A",
+    GRAY_200: "#C4C4CC",
+    GRAY_100: "#E1E1E6",
+  },
+  dark: {
+    WHITE: "#FFFFFF",
+    BASE: "#000000",
+    INVERSE: "#FFFFFF",
+    GREEN: "#00B37E",
+    GREEN_INVERSE: "#00875F",
+    BLUE: "#0064b3",
+    BLUE_INVERSE: "#003a87",
+    RED: "#AA2834",
+    RED_INVERSE: "#F75A68",
+    GRAY_100: "#121214",
+    GRAY_200: "#202024",
+    GRAY_300: "#29292E",
+    GRAY_400: "#323238",
+    GRAY_500: "#7C7C8A",
+    GRAY_600: "#C4C4CC",
+    GRAY_700: "#E1E1E6",
+  },
+};
+
+export const THEME = {
+  FONT_FAMILY: {
+    REGULAR: "Roboto_400Regular",
+    BOLD: "Roboto_700Bold",
+  },
+  FONT_SIZE: {
+    SM: 14,
+    MD: 16,
+    LG: 18,
+    XL: 24,
+  },
+};
