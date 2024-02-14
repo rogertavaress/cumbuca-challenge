@@ -8,8 +8,10 @@
     "ios": "expo run:ios",
     "test": "yarn test:unit && yarn test:e2e",
     "test:unit": "jest --testPathIgnorePatterns e2e",
-    "test:e2e": "detox test --configuration ios.sim.debug",
-    "test:e2e:config": "npx expo prebuild && detox build --configuration ios.sim.debug"
+    "test:e2e:start": "yarn start -c",
+    "test:e2e:build": "detox build --configuration ios.sim.debug",
+    "test:e2e:config": "npx expo prebuild && yarn test:e2e:build",
+    "test:e2e": "detox test --configuration ios.sim.debug"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.21.0",

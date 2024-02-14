@@ -46,6 +46,10 @@ describe("Login screen", () => {
 
     await element(by.text("Entrar")).tap();
 
+    await element(
+      by.label("OK").and(by.type("_UIAlertControllerActionView"))
+    ).tap();
+
     await expect(element(by.text("Login"))).toBeVisible();
 
     await element(by.id("login/input_pass")).clearText();

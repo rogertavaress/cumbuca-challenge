@@ -174,6 +174,5 @@ describe("Dashboard screen", () => {
     ).tap();
 
     await expect(element(by.label("Celular"))).not.toBeVisible();
-    // "input_number/decrement_button"
   });
 });
