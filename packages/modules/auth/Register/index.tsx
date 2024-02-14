@@ -1,11 +1,11 @@
 import React from "react";
-import { View } from "react-native";
 
 import { InputText } from "@core/Components/base/InputText";
 import { Header } from "@core/Components/Header";
 import { Button } from "@core/Components/base/Button";
 import { Container } from "@core/Components/base/Container";
 import { useStyles } from "@core/Theme";
+import { ScrollViewContainer } from "@core/Components/base/ScrollViewContainer";
 
 import { useRegister } from "./hook";
 import { componentStyles } from "./styles";
@@ -17,7 +17,7 @@ export const Register = () => {
     useRegister();
 
   return (
-    <View style={styles.container}>
+    <ScrollViewContainer style={styles.container}>
       <Header title="Cadastro" />
       <Container>
         <InputText
@@ -42,6 +42,6 @@ export const Register = () => {
           onPress={handleRegister}
         />
       </Container>
-    </View>
+    </ScrollViewContainer>
   );
 };

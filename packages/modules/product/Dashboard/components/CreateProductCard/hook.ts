@@ -27,8 +27,6 @@ export const useCreateProductCard = ({
     },
   });
 
-  console.log({ errorMessages });
-
   const getTotal = (stockQuantity: string, unitPrice: string): string => {
     const stockQuantityNumber =
       parseFloat(stockQuantity.replace(",", ".")) || 0;

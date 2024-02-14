@@ -1,5 +1,4 @@
 import React from "react";
-import { View } from "react-native";
 
 import { InputText } from "@core/Components/base/InputText";
 import { Header } from "@core/Components/Header";
